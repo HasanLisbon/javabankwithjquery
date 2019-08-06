@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>JavasBank</title>
+</head>
+<body>
+    <div class="container">
+        <div class="container">
+                <h2>Customer Management</h2>
+            <form class="row">
+                
+                    <div class="form-group col-sm-3">
+                        <label class="d-block" for="firstName">First Name</label>
+                        <input class="form-control d-block" id="firstName" type="text" placeholder="Enter first name">
+                    </div>
+                        
+                    <div class="form-group col-sm-3">
+                        <label >Last Name</label>
+                            <input  id="lastName" class="form-control" type="text" placeholder="Enter last name">
+                    </div>
+                        
+                    <div class="form-group col-sm-3">
+                        <label>Email</label>
+                            <input id="email" class="form-control" type="text" placeholder="Enter Email">
+                    </div>
+
+                    <div class="form-group col-sm-3">
+                            <label>Phone</label>
+                                <input id="phone" class="form-control" type="text" placeholder="Phone">
+                    </div>
+
+                    <div class="container space">
+                        <button type="submit" class="btn btn-success" id="addCustomer">add</button>
+                        <button type="submit" class="btn btn-warning">update</button>
+                        <button type="submit" class="btn btn-danger">reset</button>
+                    </div>
+            
+            </form>
+        </div>
+    <h1><style text-align: center></style>JavaBank</h1>
+    <h3 class="text-info">Customer List</h3>
+    <table class="table table-striped table-hover table-light" id="customerTable">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">First Name</th>
+                <th scope="col">Last Name</th>
+                <th scope="col">Email</th>
+                <th scope="col">Phone</th>
+                <th scope = 'col' id="edit">Edit</th>
+                <th scope="col">Delete</th>
+            </tr>
+        </thead>
+        <tbody id = 'table_body'>
+        </tbody>
+    </table>
+    </div>
+​
+    <!-- My imports -->
+    <link rel="stylesheet" type="text/css" href="styleSheet.css">
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="javabank.js"></script>
+</body>
+</html>
