@@ -4,6 +4,7 @@ $(document).ready(function(){
     fetchCustomers();
 });
 
+//gets the customer info with get request
 function fetchCustomers(){
     $.ajax({
         url:API_URL,
@@ -24,6 +25,7 @@ function fetchCustomers(){
 
 }
 
+//populates the page with customer info
 function populateCustomers(customerData){
     var customerTable=$('#table_body');
     var row;
@@ -45,14 +47,14 @@ function populateCustomers(customerData){
     
 }
 
-
+//calls the postreq method on click of the button
 function addCustomer(){
 
 $('#addCustomer').click(postReq);
 
 }
 
-
+//sends post request to add customer to the database
 function postReq(){
     
     $.ajax({
@@ -73,14 +75,14 @@ function postReq(){
     });
      console.log("working")
 }
-
+//This method is a method to call the fetchcustomer, I created this to name of the method more sensible
 function saveCustomer(){
     console.log("You have added!")
     fetchCustomers()
 
 }
 
-
+//This method takes all the information of the customer with get request from database and passes it to the form 
 function edit(){
     $(document).on('click', '.btn-edit', function(event){
         var customerID = event.target.id.split(' ')[1];
@@ -107,7 +109,7 @@ function edit(){
     });
 }
 
-
+//This method sends a put request using the id of customer
     function update(customerID){
         $(document).on('click', '#update', function(){
             
@@ -132,6 +134,8 @@ function edit(){
        
 }
 
+
+//This method deletes the customer using delete request through ajax
 function deleteCust(){
     $(document).on('click', '.btn-delete', function(event){
         console.log(event);
@@ -151,8 +155,4 @@ function deleteCust(){
     })
 }
 
-
-function reset(){
-    $('#reset').click(reset())
-}
    
