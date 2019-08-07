@@ -2,6 +2,7 @@ var API_URL= 'http://localhost:8080/javabank5/api/customer';
 
 $(document).ready(function(){
     fetchCustomers();
+    $("#reset").click(formReset);
 });
 
 //gets the customer info with get request
@@ -155,4 +156,7 @@ function deleteCust(){
     })
 }
 
+function formReset(){
+    $("#custForm").trigger("reset");
+}
    
